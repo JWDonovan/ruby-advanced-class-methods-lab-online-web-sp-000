@@ -58,6 +58,10 @@ class Song
     song
   end
 
+  def parse_filename(filename)
+    song_info = /^(?<artist>.+) - (?<song>.+)\..+$/.match(filename).named_captures
+  end
+
   def self.destroy_all
     self.all.clear
   end
