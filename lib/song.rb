@@ -42,13 +42,13 @@ class Song
     end
   end
 
-  def self.new_from_filename(filename)
-    song_info = filename.match(/^(?P<artist>.+) - (?P<song>.+)\..+$/)
-    song = Song.new
-    song.name = song_info[:song]
-    song.artist = song_info[:artist]
-    song
-  end
+  # def self.new_from_filename(filename)
+  #   song_info = filename.match(/^(?P<artist>.+) - (?P<song>.+)\..+$/)
+  #   song = Song.new
+  #   song.name = song_info[:song]
+  #   song.artist = song_info[:artist]
+  #   song
+  # end
 
   # def self.create_from_filename(filename)
   #   song_info = filename.match(/^(?P<artist>.+) - (?P<song>.+)\..+$/)
