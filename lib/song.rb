@@ -50,13 +50,13 @@ class Song
     song
   end
 
-  def self.create_from_filename(filename)
-    song_info = filename.match(/^(?P<artist>.+) - (?P<song>.+)\..+$/)
-    song = Song.create
-    song.name = song_info[:song]
-    song.artist = song_info[:artist]
-    song
-  end
+  # def self.create_from_filename(filename)
+  #   song_info = filename.match(/^(?P<artist>.+) - (?P<song>.+)\..+$/)
+  #   song = Song.create
+  #   song.name = song_info[:song]
+  #   song.artist = song_info[:artist]
+  #   song
+  # end
 
   def self.destroy_all
     self.all.clear
