@@ -61,4 +61,8 @@ class Song
   def parse_filename(filename)
 
   end
+
+  def self.destroy_all
+    self.all.clear
+  end
 end
