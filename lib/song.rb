@@ -46,7 +46,7 @@ class Song
     song_info = /^(?<artist>.+) - (?<song>.+)\..+$/.match(filename).named_captures
     song = Song.new
     song.name = song_info["song"]
-    song.artist = song_info["artist"]
+    song.artist_name = song_info["artist"]
     song
   end
 
