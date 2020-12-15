@@ -44,6 +44,7 @@ class Song
 
   def parse_filename(filename)
     song_info = /^(?<artist>.+) - (?<song>.+)\..+$/.match(filename).named_captures
+    song_info
   end
 
   def self.new_from_filename(filename)
