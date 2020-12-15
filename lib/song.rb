@@ -43,10 +43,10 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    song_info = filename.match(/^(?<artist>.+) - (?<song>.+)\..+$/)
+    song_info = filename.match(/^(?<artist>.+) - (?<song>.+)\..+$/).named_captures
     song = Song.new
-    song.name = song_info[:song]
-    song.artist = song_info[:artist]
+    song.name = song_info["song"]
+    song.artist = song_info["artist"]
     song
   end
 
