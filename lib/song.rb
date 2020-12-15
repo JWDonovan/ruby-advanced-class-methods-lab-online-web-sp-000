@@ -42,13 +42,8 @@ class Song
     end
   end
 
-  def parse_filename(filename)
-    song_info = /^(?<artist>.+) - (?<song>.+)\..+$/.match(filename).named_captures
-    song_info
-  end
-
   def self.new_from_filename(filename)
-    song_info = parse_filename(filename)
+    song_info = /^(?<artist>.+) - (?<song>.+)\..+$/.match(filename).named_captures
     song = Song.new
     song.name = song_info["song"]
     song.artist_name = song_info["artist"]
@@ -56,7 +51,7 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    song_info = parse_filename(filename)
+    song_info = /^(?<artist>.+) - (?<song>.+)\..+$/.match(filename).named_captures
     song = Song.create
     song.name = song_info["song"]
     song.artist_name = song_info["artist"]
